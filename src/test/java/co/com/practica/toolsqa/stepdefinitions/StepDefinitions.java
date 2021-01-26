@@ -2,6 +2,7 @@ package co.com.practica.toolsqa.stepdefinitions;
 
 import co.com.practica.toolsqa.questions.ValidateData;
 import co.com.practica.toolsqa.tasks.FillForm;
+import co.com.practica.toolsqa.tasks.RadioButtonSelect;
 import co.com.practica.toolsqa.util.driver.Driver;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -15,7 +16,7 @@ import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import java.util.List;
 import java.util.Map;
 
-public class TextboxStepDefinition {
+public class StepDefinitions {
 
     @Before
     public void setUp(){
@@ -33,11 +34,11 @@ public class TextboxStepDefinition {
         OnStage.theActorInTheSpotlight().attemptsTo(FillForm.completeData(dataFields));
     }
 
-    @Then("^he should see the summary of your information$")
-    public void heShouldSeeTheSummaryOfYourInformation() {
-        OnStage.theActorInTheSpotlight().should(seeThat(ValidateData.validateData(), Matchers.is(true)));
+    @Then("^he should see the summary of your information '(.*)'$")
+    public void heShouldSeeTheSummaryOfYourInformation(String message) {
+        OnStage.theActorInTheSpotlight().should(seeThat(ValidateData.validateData(), Matchers.is(message)));
     }
-    
+
     @When("^he enters the data incorrectly$")
     public void heEntersTheDataIncorrectly(List<Map<String, String>> dataFields) {
         OnStage.theActorInTheSpotlight().attemptsTo(FillForm.completeData(dataFields));
@@ -47,5 +48,16 @@ public class TextboxStepDefinition {
     public void theUserShouldNotSeeTheSummaryOfTheirInformation() {
 
     }
+
+    @When("^i select the radio button Yes$")
+    public void iSelectTheRadioButtonYes() {
+        OnStage.theActorInTheSpotlight().attemptsTo(RadioButtonSelect.select());
+    }
+
+    @Then("^I should see  'Yes'$")
+    public void iShouldSeeYes() {
+
+    }
+
 
 }

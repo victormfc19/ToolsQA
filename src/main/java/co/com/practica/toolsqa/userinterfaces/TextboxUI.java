@@ -18,8 +18,8 @@ public class TextboxUI {
             .located(By.id("permanentAddress"));
 
     public static final Target SUBMIT_BUTTON = Target.the("Button of submit")
-            .locatedBy("//button[@id='submit']");
+            .located(By.id("submit"));
 
-    public static final Target WINDOW_CONFIRMATION = Target.the("Confirmation of data")
-            .locatedBy("//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[1]/form[1]/div[6]/div[1]");
+    public static final Target EMAIL_CONFIRMATION = Target.the("Confirmation of data")
+            .locatedBy("//p[@id='email']");
 }

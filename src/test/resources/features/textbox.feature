@@ -9,7 +9,7 @@ Feature: Textbox of Elements
     | fullname |      email       | currentAddress | permanentAddress |
     | victor   | victor1@gmail.com| Bello          | Mirador          |
     | manuel   | manuel1@gmail.com| Bello          | Mirador  5ta     |
-    Then he should see the summary of your information
+    Then he should see the summary of your information 'Email:victor1@gmail.com'
 
 
   @IncorrectlyData

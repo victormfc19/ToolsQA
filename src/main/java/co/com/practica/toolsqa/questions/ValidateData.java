@@ -9,7 +9,7 @@ public class ValidateData implements Question<String> {
 
     @Override
     public String answeredBy(Actor actor) {
-        return Text.of(TextboxUI.WINDOW_CONFIRMATION).viewedBy(actor).asString();
+        return Text.of(TextboxUI.EMAIL_CONFIRMATION).viewedBy(actor).asString();
     }
 
     public static ValidateData validateData(){

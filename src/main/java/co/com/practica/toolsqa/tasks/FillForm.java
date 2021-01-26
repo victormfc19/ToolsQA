@@ -24,10 +24,10 @@ public class FillForm implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(Click.on(HomeUI.ELEMENTS_ICON),
                 Click.on(ElementsUI.TEXTBOX_OPTION),
-                Enter.theValue(dataFields.get(1).get("fullname")).into(TextboxUI.FULLNAME_TEXTBOX),
-                Enter.theValue(dataFields.get(1).get("email")).into(TextboxUI.EMAIL_TEXTBOX),
-                Enter.theValue(dataFields.get(1).get("currentAddress")).into(TextboxUI.CURRENT_ADDRESS_TEXTBOX),
-                Enter.theValue(dataFields.get(1).get("permanentAddress")).into(TextboxUI.PERMANENT_ADDRESS_TEXTBOX),
+                Enter.theValue(dataFields.get(0).get("fullname")).into(TextboxUI.FULLNAME_TEXTBOX),
+                Enter.theValue(dataFields.get(0).get("email")).into(TextboxUI.EMAIL_TEXTBOX),
+                Enter.theValue(dataFields.get(0).get("currentAddress")).into(TextboxUI.CURRENT_ADDRESS_TEXTBOX),
+                Enter.theValue(dataFields.get(0).get("permanentAddress")).into(TextboxUI.PERMANENT_ADDRESS_TEXTBOX),
                 Click.on(TextboxUI.SUBMIT_BUTTON),
                 Wait.theSeconds(2)
                 );
