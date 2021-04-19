@@ -6,9 +6,8 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
-@CucumberOptions( features = "src\\test\\resources\\features\\textbox.feature",
+@CucumberOptions( features = "src/test/resources/features/textbox.feature",
                   glue = "co.com.practica.toolsqa.stepdefinitions" ,
-                  tags =  "@CorrectlyData",
                   snippets = SnippetType.CAMELCASE
                 )
 public class TextboxRunner {

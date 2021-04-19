@@ -1,6 +1,8 @@
 package co.com.practica.toolsqa.stepdefinitions;
 
 import co.com.practica.toolsqa.questions.ValidateData;
+import co.com.practica.toolsqa.questions.ValidateWidget;
+import co.com.practica.toolsqa.tasks.Alerts;
 import co.com.practica.toolsqa.tasks.FillForm;
 import co.com.practica.toolsqa.tasks.RadioButtonSelect;
 import co.com.practica.toolsqa.util.driver.Driver;
@@ -57,6 +59,16 @@ public class StepDefinitions {
     @Then("^I should see  'Yes'$")
     public void iShouldSeeYes() {
 
+    }
+
+    @When("^he select the option Browser Windows of Widgets$")
+    public void heSelectTheOptionBrowserWindowsOfWidgets() {
+        OnStage.theActorInTheSpotlight().attemptsTo(Alerts.openWidgets());
+    }
+
+    @Then("^he should see the new window button$")
+    public void heShouldSeeTheNewWindowButton() {
+        OnStage.theActorInTheSpotlight().should(seeThat(ValidateWidget.button(), Matchers.is(true)));
     }
 
 
