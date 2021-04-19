@@ -1,6 +1,6 @@
+co/com/practica/toolsqa/stepdefinitions/StepDefinitions.java
+ co.com.practica.toolsqa.stepdefinitions.StepDefinitions
 co/com/practica/toolsqa/runners/TextboxRunner.java
  co.com.practica.toolsqa.runners.TextboxRunner
 co/com/practica/toolsqa/runners/RadioButtonRunner.java
  co.com.practica.toolsqa.runners.RadioButtonRunner
-co/com/practica/toolsqa/stepdefinitions/StepDefinitions.java
- co.com.practica.toolsqa.stepdefinitions.StepDefinitions

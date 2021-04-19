@@ -9,7 +9,7 @@ public class Driver {
     private static WebDriver driver;
 
     public static Driver getDriver(){
-        System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized","--disable-infobars");
         driver = new ChromeDriver(options);
