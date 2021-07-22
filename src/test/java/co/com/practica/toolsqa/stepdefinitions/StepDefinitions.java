@@ -6,6 +6,7 @@ import co.com.practica.toolsqa.tasks.Alerts;
 import co.com.practica.toolsqa.tasks.FillForm;
 import co.com.practica.toolsqa.tasks.RadioButtonSelect;
 import co.com.practica.toolsqa.util.driver.Driver;
+import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -71,5 +72,10 @@ public class StepDefinitions {
         OnStage.theActorInTheSpotlight().should(seeThat(ValidateWidget.button(), Matchers.is(true)));
     }
 
-
+    @After
+    public void afterTestCases(){
+        System.out.println("#######################################################");
+        System.out.println("ESTOY EJECUTANDO EL AFTER DE TODOS LOS TESTS");
+        System.out.println("#######################################################");
+    }
 }

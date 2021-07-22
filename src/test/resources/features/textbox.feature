@@ -3,7 +3,7 @@ Feature: Textbox of Elements
   Background:
     Given the user is on the page ToolsQA
 
-  @CorrectlyData
+  @Test2CorrectlyData
   Scenario: Complete form successfully
     When the user completes the corresponding fields
     | fullname |      email       | currentAddress | permanentAddress |
@@ -12,7 +12,7 @@ Feature: Textbox of Elements
     Then he should see the summary of your information 'Email:victor1@gmail.com'
 
 
-  @IncorrectlyData
+  @Test3IncorrectlyData
   Scenario: Fill in the form incorrectly
     When he enters the data incorrectly
       | fullname |      email   | currentAddress | permanentAddress |
